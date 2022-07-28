@@ -9,7 +9,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final userPostListVieModelStateNotifierProvider =
 StateNotifierProvider.autoDispose.family<UserPostListViewModel,State<List<Post>>, Params>((ref, params) {
-  print(params.userId);
+  print(
+      params.userId);
   return UserPostListViewModel(ref.watch(getUserPostsProvider),params.userId!);
   // Do something with userId/locale
 });
